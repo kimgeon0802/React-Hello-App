@@ -25,7 +25,9 @@ const MyComponentFunc = ({ name, children }) => {
     } //handleChange
 
     const handleEnter = (e) => {
-
+        if(e.keyCode === 13){
+            setValid(true);
+        }
     } //handleEnter
 
     return (
@@ -38,7 +40,9 @@ const MyComponentFunc = ({ name, children }) => {
             <button onClick={() => setValue(value - 1)}>감소</button>
             <br />
             <p>상태변수 message = {message}</p>
-            <input name="message" value={message} onChange={handleChange} />
+            <input name="message" value={message} onChange={handleChange}
+                onKeyDown={handleEnter}
+             />
             <p>상태변수 username = {username}</p>
             <input name="username" value={username} onChange={handleChange}
                 className={valid ? 'success':'failure'}
