@@ -9,6 +9,16 @@ const MyComponentFunc = ({name,children}) => {
         username: '',
         message: ''
     });
+
+    //비구조화 할당
+    const {username, message} = inputs;
+
+    //Event Handler 함수
+    const handleChange = (e) => {
+        setInputs({
+            [e.target.name]: e.target.value
+        });
+    } //handleChange
     
     return (
         <div>
