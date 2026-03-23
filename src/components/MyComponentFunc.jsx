@@ -11,6 +11,7 @@ const MyComponentFunc = ({ name, children }) => {
     });
     const [valid, setValid] = useState(false);    
     const [messageArr, setMessageArr] = useState(['Angular','React','Vue','Ember']);
+    const messageList = messageArr.map((msg,idx) => (<li key={idx}>{msg}</li>));
 
     //비구조화 할당
     const { username, message } = inputs;
@@ -49,6 +50,10 @@ const MyComponentFunc = ({ name, children }) => {
             <input name="message" value={message} onChange={handleChange}
                 onKeyDown={handleEnter}
              />
+            <br/>
+            <ul>
+                {messageList}
+            </ul> 
             <p>상태변수 username = {username}</p>
             <input name="username" value={username} onChange={handleChange}
                 className={valid ? 'success':'failure'}
