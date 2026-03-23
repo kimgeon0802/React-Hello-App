@@ -4,7 +4,12 @@ import React, {useState} from 'react';
 const MyComponentFunc = ({name,children}) => {
     //useState() Hook 사용
     const [value, setValue] = useState(0);
-
+    
+    const [inputs, setInputs] = useState({
+        username: '',
+        message: ''
+    });
+    
     return (
         <div>
             <h2>함수 형태의 컴포넌트</h2>
