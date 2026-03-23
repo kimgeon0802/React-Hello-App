@@ -36,7 +36,9 @@ class MyComponent extends Component {
         //Enter key 체크
         if(e.keyCode === 13){
             this.setState({
-                isValid: true
+                isValid: true,
+                //첫번째 message Input 필드 초기화
+                message: ''
             });
             //DOM에 직접 접근
             this.myUsername.focus();
