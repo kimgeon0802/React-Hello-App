@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import './MyComponent.css';
 
 //Function 형태의 컴포넌트
 const MyComponentFunc = ({ name, children }) => {
     //useState() Hook 사용
     const [value, setValue] = useState(0);
-
     const [inputs, setInputs] = useState({
         username: '',
         message: ''
     });
+    const [valid, setValid] = useState(false);
 
     //비구조화 할당
     const { username, message } = inputs;
