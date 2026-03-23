@@ -8,7 +8,7 @@ const App = () => {
       <MyComponent  name="리액트" />
       <MyComponent age={20} />
       <hr/>
-      <MyComponentFunc />
+      <MyComponentFunc name="리액트함수형" />
     </>
   );
 };
