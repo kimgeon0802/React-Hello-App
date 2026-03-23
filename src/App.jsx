@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <MyComponent  name="리액트" />
-      <MyComponent />
+      <MyComponent age={20} />
       <hr/>
       <MyComponentFunc />
     </>
