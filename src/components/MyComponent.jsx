@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 //Class 형태의 컴포넌트
 class MyComponent extends Component {
+    //컴포넌트 내부에 상태변수를 포함하는 state 객체선언
+    state = {
+        value: 0,
+    };
     //메서드 오버라이딩
     render() {
         //Destructuring Assignment 적용해서 변수 선언
