@@ -52,7 +52,7 @@ class MyComponent extends Component {
         const { name, age } = this.props;
         const { value, message, username, isValid, messageArr } = this.state;
         const { handleDecrement, handleChange, handleEnter } = this;
-        const messageList = messageArr.map();
+        const messageList = messageArr.map((msg) => (<li>{msg}</li>));
 
         return (
             <div>
