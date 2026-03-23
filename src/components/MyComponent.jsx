@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 
 //Class 형태의 컴포넌트
 class MyComponent extends Component {
+
+    //Event Handler함수를 Arrow함수가 아니라 기존함수로 선언했을 경우 bind(this)가 필요함
+    // constructor(props) {
+    //     super(props);
+    //     this.handleDecrement = this.handleDecrement.bind(this);
+    // }
+
     //컴포넌트 내부에 상태변수를 포함하는 state 객체선언
     state = {
         value: 0,
     };
     //Event Handler 함수선언
+    //handleDecrement() {    
     handleDecrement = () => {
         this.setState({
             value: this.state.value - 1
