@@ -13,7 +13,7 @@ const MyComponentFunc = ({ name, children }) => {
     //비구조화 할당
     const { username, message } = inputs;
 
-    //Event Handler 함수
+    //Event Handler 함수 ( ... 펼침연산자 )
     const handleChange = (e) => {
         setInputs({
             ...inputs,
