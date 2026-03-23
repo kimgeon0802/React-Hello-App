@@ -44,7 +44,9 @@ class MyComponent extends Component {
                 <button onClick={handleDecrement}>감소</button>
                 <br/>
                 <p>상태변수 message = {message}</p>
+                <input value={message} onChange={} />
                 <p>상태변수 username = {username}</p>
+                
             </div>
         );
     }
