@@ -10,15 +10,17 @@ class MyComponent extends Component {
     //Event Handler 함수선언
     handleDecrement = () => {
         this.setState({
-            value: this.state.value -1
+            value: this.state.value - 1
         });
     }; //handleDecrement  
-      
+
     //메서드 오버라이딩
     render() {
         //Destructuring Assignment 적용해서 변수 선언
         const {name, age} = this.props;
         const {value} = this.state;
+        const {handleDecrement} = this;
+
         return (
             <div>
                 <h2>클래스 형태의 컴포넌트</h2>
@@ -29,7 +31,7 @@ class MyComponent extends Component {
                         value: value + 1
                     })
                 )}>증가</button>
-                <button>감소</button>
+                <button onClick={handleDecrement}>감소</button>
             </div>
         );
     }
