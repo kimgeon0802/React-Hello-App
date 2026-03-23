@@ -17,6 +17,7 @@ class MyComponent extends Component {
         message: '',
         username: '',
         isValid: false,
+        messageArr: ['Angular','React','Vue','Ember']
     };
     //Event Handler 함수선언
     //handleDecrement() {    
