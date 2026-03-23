@@ -52,7 +52,7 @@ class MyComponent extends Component {
                 <p>상태변수 message = {message}</p>
                 <input value={message} onChange={handleChange} />
                 <p>상태변수 username = {username}</p>
-
+                <input value={username} onChange={handleChange} />
             </div>
         );
     }
